@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<title> Control Board </title>
+
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+div {
+   text-align: center;
+}
+
+button {
+    font-family: verdana;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 12px;
+}
+
+#stop{
+    background-color: #f44336;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+<form action="map.php" method="post">
+<br>
+<h1>Control Board</h1>
+<br><br><br><br><br><br>
+
+<div>
+<button name="forward" id="forward" onclick="window.open('f.html')">forward</button>
+<br><br>
+</div>
+
+<div>
+<button name="left" id="left" onclick="window.open('l.html')">left</button>
+<button name="stop" id="stop" onclick="window.open('s.html')">stop</button>
+<button name="right" id="right" onclick="window.open('r.html')">right</button>
+<br><br>
+</div>
+
+<div>
+<button name="backward" id="backward" onclick="window.open('b.html')">backward</button>
+</div>
+
+</form>
+
+
+
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "2ac8aa4f-a42d-49e1-8262-485b60f21ec8", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "4e7f9c3c-16d4-4792-8db8-f00b71cc08da", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+
+</body>
+</html>
